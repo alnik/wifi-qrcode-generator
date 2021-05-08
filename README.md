@@ -12,7 +12,7 @@ you really trust an online service? The solution is this offline generator.
 
 ```
 docker build -t wifi-qrcode-generator:0.1 https://github.com/alnik/wifi-qrcode-generator.git
-docker run -v /tmp:/tmp wifi-qrcode-generator:0.1 --ssid 'SomeNetworkSSID' -p "NetworkPa$$word" -a WPA /tmp/qrcode.png
+docker run --rm -v /tmp:/tmp wifi-qrcode-generator:0.1 --ssid 'SomeNetworkSSID' -p "NetworkPa$$word" -a WPA /tmp/qrcode.png
 ```
 
 # Build manually
