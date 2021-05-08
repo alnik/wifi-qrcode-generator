@@ -4,13 +4,18 @@ Simple CLI application to generate QR Codes for wifi-connections.
 ![build status](https://travis-ci.org/dev-jan/wifi-qrcode-generator.svg?branch=master)
 ![MIT license](https://img.shields.io/github/license/dev-jan/wifi-qrcode-generator.svg)
 
-![qr code](example.png)
-
 Do you want to create a QR code for your wifi so you don't have to type in your
 password to every device? There are several online services for this, but do
 you really trust an online service? The solution is this offline generator.
 
-# How to use?
+# Run it via Docker
+
+```
+docker build -t wifi-qrcode-generator:0.1 https://github.com/alnik/wifi-qrcode-generator.git
+docker run -v /tmp:/tmp wifi-qrcode-generator:0.1 --ssid 'SomeNetworkSSID' -p "NetworkPa$$word" -a WPA /tmp/qrcode.png
+```
+
+# Build manually
 Download the repository:
 ```
 git clone https://github.com/dev-jan/wifi-qrcode-generator.git
@@ -41,3 +46,6 @@ QR code generated. Output: example.png
 ```
 
 Now you can print out the QR code and let others connect to your wifi without typing your 20-digit password into there phones :smiley:
+
+
+![qr code](example.png)
