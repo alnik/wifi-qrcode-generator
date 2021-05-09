@@ -10,7 +10,7 @@ you really trust an online service? The solution is this offline generator.
 
 # Run via Docker
 ```
-docker run --rm -v /tmp:/tmp alnik/wifi-qrcode-generator --ssid 'SomeNetworkSSID' -p "NetworkPa$$word" -a WPA /tmp/qrcode.png
+docker run --rm --net=none -v /tmp:/tmp alnik/wifi-qrcode-generator --ssid 'SomeNetworkSSID' -p "NetworkPa$$word" -a WPA /tmp/qrcode.png
 ```
 
 # Build manually

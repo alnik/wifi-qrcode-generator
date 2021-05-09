@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:8-alpine
 COPY . ~/wifi-qrcode-generator
 WORKDIR ~/wifi-qrcode-generator
 RUN ./gradlew installDist
