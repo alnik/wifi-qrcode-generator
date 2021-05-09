@@ -27,7 +27,7 @@ docker run --rm --net=none -v /tmp:/tmp alnik/wifi-qrcode-generator --ssid 'Some
 
 Build / Push
 ```
-docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t alnik/wifi-qrcode-generator:latest --push .
+docker buildx build --platform linux/amd64,linux/arm64 -t alnik/wifi-qrcode-generator:latest --push .
 ```
 
 # Build manually
