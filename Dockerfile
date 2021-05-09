@@ -1,4 +1,5 @@
 FROM openjdk:8-alpine
+RUN apk add --no-cache bash
 COPY . ~/wifi-qrcode-generator
 WORKDIR ~/wifi-qrcode-generator
 RUN ./gradlew installDist
