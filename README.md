@@ -8,11 +8,9 @@ Do you want to create a QR code for your wifi so you don't have to type in your
 password to every device? There are several online services for this, but do
 you really trust an online service? The solution is this offline generator.
 
-# Run it via Docker
-
+# Run via Docker
 ```
-docker build -t wifi-qrcode-generator:0.1 https://github.com/alnik/wifi-qrcode-generator.git
-docker run --rm -v /tmp:/tmp wifi-qrcode-generator:0.1 --ssid 'SomeNetworkSSID' -p "NetworkPa$$word" -a WPA /tmp/qrcode.png
+docker run --rm -v /tmp:/tmp alnik/wifi-qrcode-generator --ssid 'SomeNetworkSSID' -p "NetworkPa$$word" -a WPA /tmp/qrcode.png
 ```
 
 # Build manually
