@@ -13,10 +13,15 @@ you really trust an online service? The solution is this offline generator.
 docker run --rm --net=none -v /tmp:/tmp alnik/wifi-qrcode-generator --ssid 'SomeNetworkSSID' -p "NetworkPa$$word" -a WPA /tmp/qrcode.png
 ```
 
+Build / Push
+```
+docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t alnik/wifi-qrcode-generator:latest --push .
+```
+
 # Build manually
 Download the repository:
 ```
-git clone https://github.com/dev-jan/wifi-qrcode-generator.git
+git clone https://github.com/alnik/wifi-qrcode-generator.git
 cd wifi-qrcode-generator
 ```
 
